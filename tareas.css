@@ -1,0 +1,92 @@
+
+.general{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    background-color:#696969;
+   
+}
+.navbar{
+    display:block;
+   
+    text-align:center;
+    margin-bottom: 20px;
+    background-color: aqua;
+    
+}
+
+.navbar-link{
+   text-decoration: none;
+   text-transform: uppercase ;
+   font-size: 2em;
+   color:grey;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.container{
+  border: 1px solid grey;
+  padding:5px;
+  width: 70%;
+  border-radius:5px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-left:auto;
+  margin-right: auto;
+  background-color: aqua;
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left:auto;
+    margin-right: auto;
+    
+  
+}
+.tarea,
+.description{
+    margin-bottom: 10px;;
+    border:none;
+    background-color: transparent;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;;
+    padding: 10px;
+}
+ 
+
+.button{
+    background-color:#696969 ;
+    border:none;
+    padding:10px;
+    border-radius:5px;
+    cursor: pointer;
+    color:white;
+    width: 40%;
+    margin-left:auto;
+    margin-right: auto;
+   
+}
+.taskList{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: white;
+    display:flex;
+    justify-content: space-around;
+    
+    
+}
+.btn{
+    background-color: white;
+    border:none;
+    color:white;
+    border-radius:5px;
+    cursor: pointer;
+    padding:5px;
+    width: 20px;
+    text-align: center;
+    color: grey;
+   
+
+}
+

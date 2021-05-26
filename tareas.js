@@ -1,10 +1,13 @@
 const button = document.getElementById("button");
 const form = document.getElementById("form");
+const editButton=document.getElementById("editButton");
+
 
 button.addEventListener("click",(e)=>{
   let title = document.getElementById("task").value;
 
   let description = document.getElementById("description").value;
+
 
   if (title==""||description=="") {
     return
@@ -25,9 +28,9 @@ button.addEventListener("click",(e)=>{
     localStorage.setItem("tasks",JSON.stringify(arrayTasks));
   }
 
-showTasks()
-form.reset();
-e.preventDefault()
+  showTasks()
+  form.reset();
+  e.preventDefault()
 });
 
 
@@ -41,9 +44,15 @@ let showTasks=()=>{
   for (let i = 0; i < arrayTasks.length; i++) {
     let title = arrayTasks[i].title;
     let description = arrayTasks[i].description;
+    
     let taskList =  document.createElement("li");
-    taskList.innerHTML = `${title}-${description}
-    <i id="deleteButton" class="fas fa-trash-alt btn" onclick="deleteTask('${title}')" ></i><br> <br>`;
+    taskList.innerHTML = `${title} - ${description}
+    <button id="editButton" class="far fa-edit editBtn" onclick="editTask('${title}')">  Edit</button>
+    
+
+    <button id="deleteButton" class="fas fa-trash-alt crashBtn" onclick="deleteTask('${title}')" >  Delete</button><br> <br>
+
+    `;
 
     fragment.appendChild(taskList) 
   }
@@ -70,6 +79,27 @@ let deleteTask = (title)=>{
   showTasks();
 
 }
+
+let editTask = (title)=>{
+  let arrayTasks = JSON.parse(localStorage.getItem('tasks'));
+  for (let i = 0; i < arrayTasks.length; i++) {
+     if(arrayTasks[i].title==title){
+        
+      task.value=(arrayTasks[i].title);
+      description.value=(arrayTasks[i].description);
+      arrayTasks.splice(i,1);
+     }  
+  }
+
+  localStorage.setItem("tasks",JSON.stringify(arrayTasks)); 
+
+  showTasks();
+  
+}
+
+
+
+
 
 
 

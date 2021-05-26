@@ -1,38 +1,56 @@
 
+body{
+    
+    background-color: #a9f1df;
+    
+}
+
 .general{
     display: flex;
     flex-direction: column;
-    border: 1px solid grey;
-    background-color:#696969;
+    border: 3px solid #233e8b;
+    background-color:#233e8b;
+    margin-top:80px;
+    border-radius:10px;
    
 }
+.hora{
+display:flex;
+justify-content: end;
+
+}
+
 .navbar{
     display:block;
-   
+    color:white;
     text-align:center;
     margin-bottom: 20px;
-    background-color: aqua;
+    background-color: #a9f1df;
+    border: 1px solid #233e8b;
+    border-radius:10px;
     
 }
 
 .navbar-link{
+    display:block;
    text-decoration: none;
    text-transform: uppercase ;
    font-size: 2em;
-   color:grey;
+   color:#233e8b;
    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   padding:15px;
 }
 .container{
   border: 1px solid grey;
   padding:5px;
-  width: 70%;
+  width: 85%;
   border-radius:5px;
   display:flex;
   align-items: center;
   justify-content: center;
   margin-left:auto;
   margin-right: auto;
-  background-color: aqua;
+  background-color:#a9f1df;
 
 }
 .form{
@@ -41,7 +59,7 @@
     width: 100%;
     margin-left:auto;
     margin-right: auto;
-    
+      
   
 }
 .tarea,
@@ -52,19 +70,28 @@
     border-bottom: 1px solid grey;
     border-left: 1px solid grey;;
     padding: 10px;
+    color:#233e8b;
 }
  
 
 .button{
-    background-color:#696969 ;
+    background-color:#233e8b ;
     border:none;
     padding:10px;
     border-radius:5px;
     cursor: pointer;
-    color:white;
+    color:#a9f1df;
     width: 40%;
     margin-left:auto;
     margin-right: auto;
+   
+}
+.button:hover{
+    background-color:transparent ;
+    
+    border: 2px solid #0b1b43;
+    color:#0b1b43;
+    
    
 }
 .taskList{
@@ -76,17 +103,24 @@
     
     
 }
-.btn{
-    background-color: white;
-    border:none;
-    color:white;
-    border-radius:5px;
-    cursor: pointer;
-    padding:5px;
-    width: 20px;
-    text-align: center;
-    color: grey;
-   
+.taskListShowed{
+    font-size: 30px;
+}
+.editBtn{
+  margin-left:20px;
+  margin-right:5px;
+  cursor: pointer;
+  background: none;
+  border:none;   
+  color:white;
 
 }
+.crashBtn{
+  cursor: pointer;
+  background: none;
+  border:none;   
+  color:white;
+  font-weight: 200;
+}
 
+  /*  */

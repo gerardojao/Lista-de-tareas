@@ -1,7 +1,7 @@
 const button = document.getElementById("button");
 const form = document.getElementById("form");
 const editButton=document.getElementById("editButton");
-
+const deleteBtn = document.getElementById("deleteButton")
 
 button.addEventListener("click",(e)=>{
   let title = document.getElementById("task").value;
@@ -49,9 +49,7 @@ let showTasks=()=>{
     taskList.innerHTML = `${title} - ${description}
     <button id="editButton" class="far fa-edit editBtn" onclick="editTask('${title}')">  Edit</button>
     
-
     <button id="deleteButton" class="fas fa-trash-alt crashBtn" onclick="deleteTask('${title}')" >  Delete</button><br> <br>
-
     `;
 
     fragment.appendChild(taskList) 
@@ -59,11 +57,6 @@ let showTasks=()=>{
   taskShowed.appendChild(fragment)
 }
 showTasks();
-
-// deleteButton = document.getElementById("deleteButton")
-
-// deleteButton.addEventListener("click",()=>console.log("HOLA"))
-// me hubiese gustado darle funcionalidad a los botones a traves de este metodo, pero no fue posible, tuve que usar ONCLICK
 
 
 let deleteTask = (title)=>{
@@ -96,8 +89,6 @@ let editTask = (title)=>{
   showTasks();
   
 }
-
-
 
 
 
